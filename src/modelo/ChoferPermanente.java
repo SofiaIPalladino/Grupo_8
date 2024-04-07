@@ -7,6 +7,6 @@ public class ChoferPermanente extends Chofer {
 
     @Override
     public double calcularSueldo() {
-        // Implementación del cálculo del sueldo para un chofer permanente
+        // implementación del calculo del sueldo para un chofer permanente
     }
 }

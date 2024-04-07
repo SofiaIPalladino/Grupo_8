@@ -10,3 +10,5 @@ public class ChoferContratado extends Chofer {
         // implementación del calculo del sueldo para un chofer contratado
     }
 }
+
+
