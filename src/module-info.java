@@ -4,5 +4,5 @@
 /**
  * 
  */
-module TPFINAL {
+module pruebaTP {
 }
