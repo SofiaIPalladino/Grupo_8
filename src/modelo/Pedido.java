@@ -1,24 +1,40 @@
 package modelo;
 
-import java.time.LocalDateTime;
-
 public class Pedido {
-    private Cliente cliente;
-    private LocalDateTime fecha;
-    private TipoServicio tipoServicio;
-    private Zona zona;
-    private boolean mascota;
-    private TipoEquipaje tipoEquipaje;
-    private int cantidadPasajeros;
+	private String fecha;
+	private String zona;
+	private boolean mascota;
+	private String equipaje;
+	private int cantPersonas;
+	private Cliente cliente;
+	
+	public Pedido(String fecha, String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente) {
+		this.fecha = fecha;
+		this.zona = zona;
+		this.mascota = mascota;
+		this.equipaje = equipaje;
+		this.cantPersonas = cantPersonas;
+		this.cliente = cliente;
+	}
 
-    public Pedido(Cliente cliente, LocalDateTime fecha, TipoServicio tipoServicio, Zona zona, boolean mascota, TipoEquipaje tipoEquipaje, int cantidadPasajeros) {
-        this.cliente = cliente;
-        this.fecha = fecha;
-        this.tipoServicio = tipoServicio;
-        this.zona = zona;
-        this.mascota = mascota;
-        this.tipoEquipaje = tipoEquipaje;
-        this.cantidadPasajeros = cantidadPasajeros;
-    }
-
+	public String getFecha() {
+		return fecha;
+	}
+	public String getZona() {
+		return zona;
+	}
+	public boolean getMascota() {
+		return mascota;
+	}
+	public String getEquipaje() {
+		return equipaje;
+	}
+	public int getCantPersonas() {
+		return cantPersonas;
+	}
+	@Override
+	public String toString() {
+		return "Pedido [fecha=" + fecha + ", zona=" + zona + ", mascota=" + mascota + ", equipaje=" + equipaje
+				+ ", cantPersonas=" + cantPersonas + "]";
+	}
 }
