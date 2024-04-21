@@ -1,5 +1,7 @@
 package modelo;
 
+import vehiculo.Vehiculo;
+
 public class ViajeZonaCalleSinAfaltar extends Viaje {
 
 	public ViajeZonaCalleSinAfaltar(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {

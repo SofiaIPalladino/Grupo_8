@@ -1,5 +1,7 @@
 package modelo;
 
+import vehiculo.Vehiculo;
+
 public abstract class Viaje implements IViaje {
 	
 	protected Pedido pedido;

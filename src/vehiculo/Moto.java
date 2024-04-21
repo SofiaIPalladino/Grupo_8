@@ -1,4 +1,4 @@
-package factory;
+package vehiculo;
 
 import modelo.Pedido;
 
