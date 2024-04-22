@@ -1,5 +1,7 @@
-package modelo;
+package viaje;
 
+import chofer.Chofer;
+import modelo.Pedido;
 import vehiculo.Vehiculo;
 
 public class ViajeFactory {

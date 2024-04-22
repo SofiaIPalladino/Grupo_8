@@ -1,4 +1,6 @@
- package modelo;
+ package viaje;
+
+import modelo.Pedido;
 
 public abstract class DecoratorViajes implements IViaje {
 
