@@ -10,8 +10,8 @@ public class DecoratorConMascota extends DecoratorViajes {
 	public double getCosto() {
 		
 		double costoEncapsulado=this.encapsulado.getCosto();
-		double incrXPersona=Viaje.costoBase*0.10*this.encapsulado.getPedido().getCantPersonas();
-		double incrXKm=Viaje.costoBase*0.20*this.encapsulado.getDistanciaReal();
+		double incrXPersona=Viaje.getCostoBase()*0.10*this.encapsulado.getPedido().getCantPersonas();
+		double incrXKm=Viaje.getCostoBase()*0.20*this.encapsulado.getDistanciaReal();
 		
 		return costoEncapsulado+incrXPersona+incrXKm;
 	}

@@ -35,4 +35,5 @@ public abstract class Viaje implements IViaje {
 	public Pedido getPedido() {
 		return pedido;
 	}
+	public abstract double getCosto();
 }

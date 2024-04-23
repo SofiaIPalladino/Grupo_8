@@ -7,8 +7,8 @@ public class ViajeZonaCalleSinAfaltar extends Viaje {
 	}
 
 	public double getCosto() {
-		double incrXPersona=Viaje.costoBase*this.getPedido().getCantPersonas()*0.20;
-		double incrXKm=Viaje.costoBase*this.getDistanciaReal()*0.15;
-		return Viaje.costoBase+incrXPersona+incrXKm;
+		double incrXPersona=Viaje.getCostoBase()*this.getPedido().getCantPersonas()*0.20;
+		double incrXKm=Viaje.getCostoBase()*this.getDistanciaReal()*0.15;
+		return Viaje.getCostoBase()+incrXPersona+incrXKm;
 	}
 }
