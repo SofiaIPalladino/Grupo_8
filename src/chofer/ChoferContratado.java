@@ -7,7 +7,6 @@ public class ChoferContratado extends Chofer {
 	
 	public ChoferContratado(String dni, String nombre,float por) {
 		super(dni, nombre);
-		// TODO Auto-generated constructor stub
 		this.porcentaje=por;
 	}
 

@@ -7,5 +7,6 @@ public class NoVehiculoException extends Exception {
 
     public NoVehiculoException(String message) {
         super(message);
+        
     }
 }
