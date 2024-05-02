@@ -26,6 +26,8 @@ public abstract class Vehiculo {
 	
 	/**
 	 * Este método se encarga de devolver un objeto de tipo Integer indicando el valor de prioridad para el pedido en cuestión.
+	 * Se aplicó el patrón Template, por un lado tenemos métodos comúnes al algortimo que son los que están dentro de la condición del if.
+	 * Luego las clases que heredan de Vehiculo deberán implementar el método abstracto califica con los detalles concretos de cada clase.
 	 * 
 	 * <p><strong>Precondiciones:</strong></p>
 	 * <ul>
