@@ -31,7 +31,7 @@ public class Pedido {
 	}
 	
 	public boolean usoBaul() {
-		if (this.equipaje==("UsoBaul"))
+		if (this.equipaje==("Baul"))
 			return true;
 		else 
 			return false;

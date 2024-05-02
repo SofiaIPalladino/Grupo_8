@@ -2,7 +2,7 @@ package excepciones;
 
 public class UsuarioExistenteException extends Exception {
     public UsuarioExistenteException() {
-        super("No se encontró ningún vehículo que cumpla con los requisitos del viaje.");
+        super("El usuario ya existe.");
     }
 
     public UsuarioExistenteException(String message) {
