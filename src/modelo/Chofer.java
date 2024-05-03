@@ -1,5 +1,8 @@
 package modelo;
 
+/**
+ * Clase abstracta que modela el comportamiento de un chofer. <br>
+ */
 public abstract class Chofer {
 	protected String dni;
 	protected String nombre;
@@ -9,6 +12,10 @@ public abstract class Chofer {
 		this.dni=dni;
 	}
 	
+	/**
+	 * Metodo abstracto que calcula el sueldo del chofer.<br>
+	 * @return devuelve un valor mayor a 0.<br>
+	 */
 	protected abstract double calcularSueldo();
 	public String getDni() {
 		return dni;
@@ -16,5 +23,4 @@ public abstract class Chofer {
 	public String getNombre() {
 		return nombre;
 	}
-	
 }

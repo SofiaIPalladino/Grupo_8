@@ -1,6 +1,20 @@
 package modelo;
 
+/**
+ * Clase destinada a fabricar viajes.<br>
+ */
 public class ViajeFactory {
+	
+	/**
+	 * Este metodo construye un viaje cuyo tipo depende del parametro "pedido".
+	 * @param pedido: pedido por el cual se construye un viaje.<br>
+	 * @param chofer: chofer asignado al viaje.<br>
+	 * @param vehiculo: vehiculo asignado al viaje.<br>
+	 * @return devuelve un objeto de tipo IViaje.<br>
+	 * <br> Precondicion: pedido diferente de null.<br>
+	 * <br> Precondicion: chofer diferente de null.<br>
+	 * <br> Precondicion: vehiculo diferente de null.<br>
+	 */
 	public IViaje getViaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
 		IViaje viaje;
 		viaje=null;
