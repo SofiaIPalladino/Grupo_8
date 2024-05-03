@@ -1,12 +1,18 @@
-package modelo;
+package viaje;
+
+import chofer.Chofer;
+import modelo.Pedido;
+import vehiculo.Vehiculo;
 
 /**
  * Clase abstracta que modela las caracteristicas y el comportamoiento de los viajes.<br>
  */
 public abstract class Viaje implements IViaje {
 	
+	protected String status;
 	protected Pedido pedido;
 	protected Chofer chofer;
+	protected Cliente cliente;
 	protected double distanciaReal,costo;
 	protected static double costoBase=1000;
 	protected Vehiculo vehiculo;
@@ -51,4 +57,15 @@ public abstract class Viaje implements IViaje {
 	 * Este metodo abstracto calculara el costo del viaje dependiento del tipo de viaje.<br>
 	 */
 	public abstract double getCosto();
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+	
+	
+
 }

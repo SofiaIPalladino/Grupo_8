@@ -1,4 +1,8 @@
-package modelo;
+package viaje;
+
+import chofer.Chofer;
+import modelo.Pedido;
+import vehiculo.Vehiculo;
 
 /**
  * Clase concreta que modela las caracteristicas y el comportamiento de los viajes de tipo ViajeZonaCalleSinAfaltar.<br>

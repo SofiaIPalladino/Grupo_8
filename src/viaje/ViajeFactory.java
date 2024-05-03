@@ -1,4 +1,8 @@
-package modelo;
+package viaje;
+
+import chofer.Chofer;
+import modelo.Pedido;
+import vehiculo.Vehiculo;
 
 /**
  * Clase destinada a fabricar viajes.<br>

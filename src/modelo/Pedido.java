@@ -41,9 +41,18 @@ public class Pedido {
 	public String getEquipaje() {
 		return equipaje;
 	}
+	
+	public boolean usoBaul() {
+		if (this.equipaje==("Baul"))
+			return true;
+		else 
+			return false;
+	}
+	
 	public int getCantPersonas() {
 		return cantPersonas;
 	}
+	
 	@Override
 	public String toString() {
 		return "Pedido [fecha=" + fecha + ", zona=" + zona + ", mascota=" + mascota + ", equipaje=" + equipaje

@@ -1,4 +1,6 @@
- package modelo;
+ package viaje;
+
+import modelo.Pedido;
 
  /**
   * Clase abstracta que modela modela las caracteristicas y comportamiento comun de los encapsulados.<br>
