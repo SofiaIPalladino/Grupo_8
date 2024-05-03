@@ -5,6 +5,7 @@ import modelo.Pedido;
 import vehiculo.Vehiculo;
 
 public class ViajeFactory {
+	
 	public IViaje getViaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
 		IViaje viaje;
 		viaje=null;

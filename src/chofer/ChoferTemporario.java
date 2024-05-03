@@ -6,7 +6,7 @@ package chofer;
  */
 public class ChoferTemporario extends Chofer {
 	
-	private final double sueldoBasico;
+	private static double sueldoBasico;
 	private double aportes;
 	private double plusXCantViajes;
 	private int cantViajes;

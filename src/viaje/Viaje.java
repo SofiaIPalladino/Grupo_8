@@ -6,8 +6,10 @@ import vehiculo.Vehiculo;
 
 public abstract class Viaje implements IViaje {
 	
+	protected String status;
 	protected Pedido pedido;
 	protected Chofer chofer;
+	protected Cliente cliente;
 	protected double distanciaReal,costo;
 	protected static double costoBase=1000;
 	protected Vehiculo vehiculo;
@@ -39,6 +41,15 @@ public abstract class Viaje implements IViaje {
 	public Pedido getPedido() {
 		return pedido;
 	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+	
 	
 
 }
