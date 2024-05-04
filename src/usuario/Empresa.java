@@ -2,8 +2,6 @@ package usuario;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.LinkedList;
-
 import chofer.Chofer;
 import vehiculo.Vehiculo;
 import viaje.Viaje;
