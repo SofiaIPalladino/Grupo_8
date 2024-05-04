@@ -56,7 +56,7 @@ public abstract class Vehiculo {
 	 * @param cantPasajeros La cantidad de pasajeros del pedido.
 	 * @return un boolean.
 	 */
-	private boolean verificaPasajeros(int cantPasajeros){
+	public boolean verificaPasajeros(int cantPasajeros){
 		if (cantPasajeros <= this.cantMaxPas)
 			return true;
 		else
@@ -70,7 +70,7 @@ public abstract class Vehiculo {
 	 * @param cantPasajeros La cantidad de pasajeros del pedido.
 	 * @return un boolean.
 	 */
-	private boolean verificaBaul(boolean baul) {
+	public boolean verificaBaul(boolean baul) {
 		if(!baul) {
 			return true;
 		}else
@@ -79,7 +79,7 @@ public abstract class Vehiculo {
 	/**
 	 * idem verificaBaul
 	 */
-	private boolean verificaMascota(boolean mascota) {
+	public boolean verificaMascota(boolean mascota) {
 		if(!mascota) {
 			return true;
 		}else

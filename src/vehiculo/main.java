@@ -1,6 +1,6 @@
 package vehiculo;
-import modelo.Pedido;
 import modelo.Cliente;
+import modelo.Pedido;
 
 public class main {
 
