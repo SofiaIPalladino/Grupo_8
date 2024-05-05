@@ -2,6 +2,7 @@
 
 import chofer.Chofer;
 import pedido.Pedido;
+import usuario.Cliente;
 import vehiculo.Vehiculo;
 
  /**
@@ -29,15 +30,15 @@ public abstract class DecoratorViajes implements IViaje {
 		return this.encapsulado.getStatus();
 	}
 
-	@Override
 	public Chofer getChofer() {
-		// TODO Auto-generated method stub
 		return  this.encapsulado.getChofer();
 	}
 	
-	@Override
 	public Vehiculo getVehiculo() {
-		// TODO Auto-generated method stub
 		return this.encapsulado.getVehiculo();
+	}
+	
+	public Cliente getCliente() {
+		return this.encapsulado.getCliente();
 	}
 }

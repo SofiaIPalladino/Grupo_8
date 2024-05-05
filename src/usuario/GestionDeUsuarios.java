@@ -1,11 +1,13 @@
 package usuario;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import excepciones.UsuarioExistenteException;
 import excepciones.UsuarioInexistenteException;
 import sistema.Empresa;
+import viaje.IViaje;
 
 public class GestionDeUsuarios{
 	
@@ -56,5 +58,16 @@ public class GestionDeUsuarios{
 		}
 		
 		return null;
+	}
+	
+	public List<IViaje> getViajes(Usuario usuario){
+		List<IViaje> listadoViajes = Empresa.getInstance().getViajes();
+		List<IViaje> viajesUsuario = new ArrayList<IViaje>();
+		for(IViaje viaje: listadoViajes) {
+			if (viaje.getCliente() == usuario) {				
+				viajesUsuario.add(viaje);
+			}
+		}
+		return viajesUsuario;
 	}
 }
