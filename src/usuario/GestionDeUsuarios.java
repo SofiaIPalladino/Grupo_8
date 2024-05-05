@@ -60,11 +60,11 @@ public class GestionDeUsuarios{
 		return null;
 	}
 	
-	public List<IViaje> getViajes(Usuario usuario){
+	public List<IViaje> getViajes(Cliente cliente){
 		List<IViaje> listadoViajes = Empresa.getInstance().getViajes();
 		List<IViaje> viajesUsuario = new ArrayList<IViaje>();
 		for(IViaje viaje: listadoViajes) {
-			if (viaje.getCliente() == usuario) {				
+			if (viaje.getCliente() == cliente) {				
 				viajesUsuario.add(viaje);
 			}
 		}
