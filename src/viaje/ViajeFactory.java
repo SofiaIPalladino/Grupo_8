@@ -33,7 +33,6 @@ public class ViajeFactory {
 			viaje=new ViajeZonaPeligrosa(pedido,chofer,vehiculo);
 		}
 		
-		
 		if(pedido.getMascota()) {
 			viaje=new DecoratorConMascota(viaje);
 		}

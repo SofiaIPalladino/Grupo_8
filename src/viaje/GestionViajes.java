@@ -27,6 +27,7 @@ public class GestionViajes {
 		while(i<pedidos.size()) {
 			p=pedidos.get(i);
 			v=getVehiculo(p);
+			i++;
 			if(v!=null) {
 				Chofer c=null;
 				try {
@@ -34,11 +35,13 @@ public class GestionViajes {
 					e.setChoferConViaje(c);
 					e.setVehiculoConViaje(v);
 					IViaje viaje=viajeFactory.getViaje(p, c, v);
-					e.agregoViaje(viaje);	
+					e.agregoViaje(viaje);
+					e.aceptaPedido(p);
 					if (c instanceof ChoferContratado) {
 						ChoferContratado auxc=(ChoferContratado) c;
 						auxc.recaudaDeViaje(viaje.getCosto());
 					}
+					
 					System.out.println("Viaje Creado Con exito");
 				} catch (NoChoferException e1) {////separar 
 					e1.printStackTrace();
@@ -57,16 +60,18 @@ public class GestionViajes {
         IViaje viaje=null;
 		while (i < viajes.size()&& !pagado) {
 			viaje= viajes.get(i);
-			if(viaje.getPedido().getCliente().getUsuario().equals(c.getUsuario())){
+			if(viaje.getCliente().equals(c)){
 				viaje.setStatus("Pagado");
 				e.sumaRecaudado(viaje.getCosto());
 				pagado=true;
+				System.out.println("Viaje pagado con exito");
 			}
+			i++;
 		}
-		throw new ViajeNoEncontradoException();
+		if (!pagado)
+			throw new ViajeNoEncontradoException();
 	}
-	
-	
+
 	
 	public void finalizarViaje(Chofer c) throws ViajeNoEncontradoException {
 		Empresa e=Empresa.getInstance();
@@ -90,9 +95,11 @@ public class GestionViajes {
 					e1.printStackTrace();
 				}
 				finalizado=true;
+				System.out.println("Viaje finalizado con exito");
 			}
 		}
-		throw new ViajeNoEncontradoException();
+		if (!finalizado)
+			throw new ViajeNoEncontradoException();
 	}	
 	
 	private static Vehiculo getVehiculo(Pedido pedido) throws NoVehiculoException {		   

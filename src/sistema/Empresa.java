@@ -42,6 +42,7 @@ public class Empresa {
 
 	
 	private Empresa() { 
+		viajes = new ArrayList<IViaje>();
 		vehiculosEnUso = new ArrayList<Vehiculo>();
 		vehiculos = new ArrayList<Vehiculo>();
 		choferes = new ArrayList<Chofer>();
@@ -133,7 +134,6 @@ public class Empresa {
 	public void setChoferDisponible(Chofer c) throws NoChoferException {
 		if (!choferesEnUso.remove(c))
 			throw new NoChoferException("El chofer seleccionado no esta en uso");
-		this.choferes.add(c);
 	}
 	
 	
@@ -159,7 +159,21 @@ public class Empresa {
 		this.pedidos.add(p);
 	}
 	public void agregoViaje(IViaje v) {
+		//System.out.println(v);
 		this.viajes.add(v);
+		//System.out.println(viajes.get(0));
+	}
+	
+	public void agregaChofer(Chofer c) {
+		this.choferes.add(c);
+	}
+	
+	public void agregaVehiculo(Vehiculo v) {
+		this.vehiculos.add(v);
+	}
+	
+	public void aceptaPedido(Pedido p) {
+		this.pedidos.remove(p);
 	}
 	
 	
@@ -198,6 +212,7 @@ public class Empresa {
 			}
 		}
 	}
+	
 }
 	
 	

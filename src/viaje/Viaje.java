@@ -29,6 +29,9 @@ public abstract class Viaje implements IViaje {
 		this.vehiculo=vehiculo;
 		this.status="solicitado";
 		this.fecha = LocalDate.now();
+		this.distanciaReal=pedido.getDistancia();
+		this.cliente=pedido.getCliente();
+		
 	}
 	
     /**
