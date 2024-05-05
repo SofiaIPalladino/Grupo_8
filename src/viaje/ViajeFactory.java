@@ -19,7 +19,7 @@ public class ViajeFactory {
 	 * <br> Precondicion: chofer diferente de null.<br>
 	 * <br> Precondicion: vehiculo diferente de null.<br>
 	 */
-	public IViaje getViaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
+	public static IViaje getViaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
 		IViaje viaje;
 		viaje=null;
 		

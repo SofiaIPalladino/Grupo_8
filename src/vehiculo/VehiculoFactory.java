@@ -1,7 +1,7 @@
 package vehiculo;
 
 public class VehiculoFactory {
-	public Vehiculo getVehiculo(String tipo,String patente) {
+	public static Vehiculo getVehiculo(String tipo,String patente) {
 		if (tipo=="Automovil") 
 			return new Automovil(patente,4,true,true);
 		if (tipo=="Moto")
