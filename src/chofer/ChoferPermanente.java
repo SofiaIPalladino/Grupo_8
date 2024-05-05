@@ -8,9 +8,9 @@ import java.util.Date;
  */
 public class ChoferPermanente extends Chofer {
 
-	private static double sueldoBasico;
-    private double plusXAntiguedad;
-    private double plusXHijos;
+	private static double sueldoBasico=20000;
+    private double plusXAntiguedad=0.1;
+    private double plusXHijos=0.05;
     private double aportes;
     private int cantHijos;
     private Date fechaIngreso;
@@ -25,12 +25,8 @@ public class ChoferPermanente extends Chofer {
      * @param aportes El porcentaje de descuento por aportes jubilatorios.
      * @param fechaIngreso La fecha de ingreso del chofer a la empresa.
      */
-    public ChoferPermanente(String dni, String nombre, double sueldoBasico, double plusXAntiguedad, double plusXHijos, double aportes, int cantHijos, Date fechaIngreso) {
+    public ChoferPermanente(String dni, String nombre, int cantHijos, Date fechaIngreso) {
     	super(dni, nombre);
-    	this.sueldoBasico = sueldoBasico;
-    	this.plusXAntiguedad = plusXAntiguedad;
-    	this.plusXHijos = plusXHijos;
-    	this.aportes = aportes;
     	this.fechaIngreso = fechaIngreso;
     	this.cantHijos = cantHijos;
     }
@@ -45,10 +41,10 @@ public class ChoferPermanente extends Chofer {
     public double getSueldo() {
         double sueldo = sueldoBasico;
         // Aquí se calcula el sueldo bruto (sueldo basico + pluses).
-        sueldo += sueldoBasico * (plusXAntiguedad / 100);
-        sueldo += sueldoBasico * (plusXHijos / 100)*;
+        sueldo += sueldoBasico * (plusXAntiguedad*getAntiguedad());
+        sueldo += sueldoBasico * (plusXHijos*this.cantHijos);
         // Aquí se le restan los aportes al sueldo bruto.
-        sueldo -= sueldo * (aportes / 100);
+        sueldo -= sueldo * aportes;
         return sueldo;
     }
 
@@ -86,6 +82,12 @@ public class ChoferPermanente extends Chofer {
 
 	public double getSueldoBasico() {
 		return sueldoBasico;
+	}
+	
+	public int getAntiguedad() {
+		//Debes calcular la cantidad de años que trabajo, tiene que ser casteado a un entero
+		
+		return 0;
 	}
     
 }

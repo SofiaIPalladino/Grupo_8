@@ -1,7 +1,7 @@
 package viaje;
 
 import chofer.Chofer;
-import modelo.Pedido;
+import pedido.Pedido;
 import vehiculo.Vehiculo;
 
 /**

@@ -7,7 +7,7 @@ package chofer;
 public class ChoferContratado extends Chofer {
 	
 	private double recaudado;
-	private double gananciaXViaje;
+	private static double gananciaXViaje=0.15;
 	
 	/**
      * Constructor para crear un ChoferContratado.
@@ -27,7 +27,7 @@ public class ChoferContratado extends Chofer {
 	 * @return El sueldo neto del chofer contratado.
 	 */
 	public double getSueldo() {
-		return this.recaudado * (this.gananciaXViaje/100);
+		return this.recaudado *gananciaXViaje;
 	}
 	public void recaudaDeViaje(double monto) {
 		this.recaudado += monto;

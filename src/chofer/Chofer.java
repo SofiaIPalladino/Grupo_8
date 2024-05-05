@@ -8,6 +8,8 @@ public abstract class Chofer {
 	
 	protected String dni;
 	protected String nombre;
+	protected int cantidadDeViajes=0;
+	protected static double aportes=0.15;
 	
 	/**
      * Constructor para crear un Chofer.
@@ -41,6 +43,12 @@ public abstract class Chofer {
 		this.nombre = nombre;
 	}
 	
-	
+	public void agregaViaje() {
+		this.cantidadDeViajes++;
+	}	
+
+	public int cantViajes() {
+		return this.cantidadDeViajes;
+	}
 
 }

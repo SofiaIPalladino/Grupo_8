@@ -1,10 +1,14 @@
-package modelo;
+package pedido;
+
+import java.util.Date;
+
+import usuario.Cliente;
 
 /**
  * Clase que modela las caracteristicas de un pedido.<br>
  */
 public class Pedido {
-	private String fecha;
+	private Date  fecha;
 	private String zona;
 	private boolean mascota;
 	private String equipaje;
@@ -20,7 +24,7 @@ public class Pedido {
 	 * @param cantPersonas: cantidad de personas a transportar.<br>
 	 * @param cliente: cliente que realiza el pedido.<br>
 	 */
-	public Pedido(String fecha, String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente) {
+	public Pedido(Date fecha, String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente) {
 		this.fecha = fecha;
 		this.zona = zona;
 		this.mascota = mascota;
@@ -29,7 +33,7 @@ public class Pedido {
 		this.cliente = cliente;
 	}
 
-	public String getFecha() {
+	public Date  getFecha() {
 		return fecha;
 	}
 	public String getZona() {
@@ -58,4 +62,7 @@ public class Pedido {
 		return "Pedido [fecha=" + fecha + ", zona=" + zona + ", mascota=" + mascota + ", equipaje=" + equipaje
 				+ ", cantPersonas=" + cantPersonas + "]";
 	}
+	
+	public Cliente getCliente() {return this.cliente;}
+	
 }
