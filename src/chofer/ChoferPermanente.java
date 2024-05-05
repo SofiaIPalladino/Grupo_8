@@ -1,7 +1,7 @@
 package chofer;
 
-import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.time.LocalDate;
 
 /**
  * Clase que representa a un chofer permanente de la empresa.
@@ -87,13 +87,8 @@ public class ChoferPermanente extends Chofer {
 	
     
 	public int getAntiguedad() {
-        LocalDate fechaActual = LocalDate.now();
-        long diff = ChronoUnit.YEARS.between(this.fechaIngreso, fechaActual);
-        if (!(this.fechaIngreso.getYear() <= fechaActual.getYear() && this.fechaIngreso.getMonthValue() <= fechaActual.getMonthValue() && this.fechaIngreso.getDayOfMonth() <= fechaActual.getDayOfMonth())) {
-            LocalDate fechaIngresoAjustada = LocalDate.of(this.fechaIngreso.getYear() + 1, this.fechaIngreso.getMonthValue(), this.fechaIngreso.getDayOfMonth());
-            diff = ChronoUnit.YEARS.between(fechaIngresoAjustada, fechaActual);
-        }
-        return (int) diff;
+        long anios = ChronoUnit.YEARS.between(this.fechaIngreso, LocalDate.now());
+        return (int) anios;
     }
 	
 }

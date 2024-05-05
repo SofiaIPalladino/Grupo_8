@@ -1,6 +1,6 @@
  package viaje;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import chofer.Chofer;
 import pedido.Pedido;
@@ -44,7 +44,7 @@ public abstract class DecoratorViajes implements IViaje {
 		return this.encapsulado.getCliente();
 	}
 	
-	public Date getFecha() {
+	public LocalDate getFecha() {
 		return this.encapsulado.getFecha();
 	}
 

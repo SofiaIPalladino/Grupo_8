@@ -1,6 +1,6 @@
 package pedido;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import usuario.Cliente;
 
@@ -8,7 +8,7 @@ import usuario.Cliente;
  * Clase que modela las caracteristicas de un pedido.<br>
  */
 public class Pedido {
-	private Date  fecha;
+	private LocalDate  fecha;
 	private String zona;
 	private boolean mascota;
 	private String equipaje;
@@ -26,7 +26,7 @@ public class Pedido {
 	 * @param cliente: cliente que realiza el pedido.<br>
 	 */
 	public Pedido(String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente,double distancia) {
-		this.fecha = new Date();
+		this.fecha = LocalDate.now();
 		this.zona = zona;
 		this.mascota = mascota;
 		this.equipaje = equipaje;
@@ -39,7 +39,7 @@ public class Pedido {
 		return distancia;
 	}
 	
-	public Date  getFecha() {
+	public LocalDate  getFecha() {
 		return fecha;
 	}
 	public String getZona() {

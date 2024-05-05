@@ -1,6 +1,7 @@
 package sistema;
 
 import java.util.List;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -170,11 +171,11 @@ public class Empresa {
 	 * 
 	 * <br> precondiciones: desde tiene que ser una fecha menor o igual a hasta
 	 */
-	public void muestraViajes(Chofer chofer, Date desde, Date hasta) {
+	public void muestraViajes(Chofer chofer, LocalDate desde, LocalDate hasta) {
 		List<IViaje> viajesChofer = getViajes(chofer);
 		System.out.println("Viajes de "+chofer.getNombre());
 		for(IViaje viaje: viajesChofer) {
-			if (viaje.getFecha().after(desde) && viaje.getFecha().before(hasta)) {				
+			if (viaje.getFecha().isAfter(desde.minusDays(1)) && viaje.getFecha().isBefore(hasta.plusDays(1))) {				
 				System.out.println(viaje);
 			}
 		}
@@ -188,11 +189,11 @@ public class Empresa {
 	 * 
 	 * <br> precondiciones: desde tiene que ser una fecha menor o igual a hasta
 	 */
-	public void muestraViajes(Cliente cliente, Date desde, Date hasta) {
+	public void muestraViajes(Cliente cliente, LocalDate desde, LocalDate hasta) {
 		List<IViaje> viajesChofer = getViajes(cliente);
 		System.out.println("Viajes de "+cliente.getNombre());
 		for(IViaje viaje: viajesChofer) {
-			if (viaje.getFecha().after(desde) && viaje.getFecha().before(hasta)) {				
+			if (viaje.getFecha().isAfter(desde.minusDays(1)) && viaje.getFecha().isBefore(hasta.plusDays(1))) {				
 				System.out.println(viaje);
 			}
 		}

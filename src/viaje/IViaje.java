@@ -1,6 +1,6 @@
 package viaje;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import chofer.Chofer;
 import pedido.Pedido;
@@ -20,5 +20,5 @@ public interface IViaje extends Comparable<IViaje>{
     Chofer getChofer();
     Vehiculo getVehiculo();
     Cliente getCliente();
-    Date getFecha();
+    LocalDate getFecha();
 }

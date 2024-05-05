@@ -1,5 +1,6 @@
 package viaje;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import chofer.Chofer;
@@ -19,7 +20,7 @@ public abstract class Viaje implements IViaje {
 	protected double distanciaReal,costo;
 	protected static double costoBase=1000;
 	protected Vehiculo vehiculo;
-	protected Date fecha;
+	protected LocalDate fecha;
 
 	
 	public Viaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
@@ -27,7 +28,7 @@ public abstract class Viaje implements IViaje {
 		this.chofer=chofer;
 		this.vehiculo=vehiculo;
 		this.status="solicitado";
-		this.fecha = new Date();
+		this.fecha = LocalDate.now();
 	}
 	
     /**
@@ -84,7 +85,7 @@ public abstract class Viaje implements IViaje {
 		return this.cliente;
 	}
 	
-	public Date getFecha() {
+	public LocalDate getFecha() {
 		return this.fecha;
 	}
 

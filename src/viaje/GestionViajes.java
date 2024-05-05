@@ -17,7 +17,7 @@ public class GestionViajes {
 
 	ViajeFactory viajeFactory=new ViajeFactory();
 	
-	public void CreoViaje() {
+	public void CreoViaje() throws NoVehiculoException {
 		Empresa e=Empresa.getInstance();
 		List<Pedido> pedidos=e.getPedidos();
 		
@@ -26,7 +26,7 @@ public class GestionViajes {
 		int i=0;
 		while(i<pedidos.size()) {
 			p=pedidos.get(i);
-			v=getVehiculo(e.getVehiculos(),p.getCantPersonas(),p.usoBaul(),p.getMascota());
+			v=getVehiculo(p);
 			if(v!=null) {
 				Chofer c=null;
 				try {
@@ -40,8 +40,7 @@ public class GestionViajes {
 						auxc.recaudaDeViaje(viaje.getCosto());
 					}
 					System.out.println("Viaje Creado Con exito");
-				} catch (NoChoferException | NoVehiculoException e1) {////separar 
-					// TODO Auto-generated catch block
+				} catch (NoChoferException e1) {////separar 
 					e1.printStackTrace();
 				}			
 			}
@@ -94,22 +93,21 @@ public class GestionViajes {
 			}
 		}
 		throw new ViajeNoEncontradoException();
-	}
-
+	}	
 	
-		
-	
-	private Vehiculo getVehiculo(Pedido pedido) throws NoVehiculoException {		   
+	private static Vehiculo getVehiculo(Pedido pedido) throws NoVehiculoException {		   
 		List<Vehiculo> listadoVehiculos = Empresa.getInstance().getVehiculos();
 		int i = 0;
 	    Vehiculo mejorVehiculo = null;
 	    int mayorPrioridad = 0;
 	    while (i < listadoVehiculos.size()) {
-	    	Vehiculo vehiculo = listadoVehiculos.get(i);
-	    	Integer prioridad = vehiculo.getPrioridad(pedido);
-	        if (prioridad != null && prioridad.intValue() > mayorPrioridad) { // si prioridad es igual a null, el vehiculo no es apto para el pedido
-	        	mayorPrioridad = prioridad.intValue();
-	        	mejorVehiculo = vehiculo;
+	    	Vehiculo v = listadoVehiculos.get(i);
+	    	Integer prioridad = v.getPrioridad(pedido);
+	        if (prioridad != null && prioridad.intValue() > mayorPrioridad) {// si prioridad es igual a null, el vehiculo no es apto para el pedido
+	        	if(v.verificaPasajeros(pedido.getCantPersonas()) && v.verificaBaul(pedido.usoBaul())&& v.verificaMascota(pedido.getMascota())) {
+	        		mayorPrioridad = prioridad.intValue();
+		        	mejorVehiculo = v;
+	        	}
 	        }
 	        i++;
 	    }
