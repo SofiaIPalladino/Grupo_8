@@ -59,28 +59,25 @@ public abstract class Viaje implements IViaje {
 	
 	
 	
-	@Override
 	public Vehiculo getVehiculo() {
-		// TODO Auto-generated method stub
 		return this.vehiculo;
 	}
 
-	@Override
 	public Chofer getChofer() {
-		// TODO Auto-generated method stub
 		return this.chofer;
 	}
 
-	@Override
 	public void setStatus(String s) {
 		this.status=s;
 		
 	}
 
-	@Override
 	public String getStatus() {
-		// TODO Auto-generated method stub
 		return this.status;
+	}
+	
+	public Cliente getCliente() {
+		return this.cliente;
 	}
 
 	/**
@@ -88,5 +85,12 @@ public abstract class Viaje implements IViaje {
 	 */
 	public abstract double getCosto();
 
+	@Override
+	public String toString() {
+		return "Viaje [status=" + status + ", pedido=" + pedido + ", chofer=" + chofer + ", cliente=" + cliente
+				+ ", distanciaReal=" + distanciaReal + ", costo=" + costo + ", vehiculo=" + vehiculo + "]";
+	}
+
+	
 
 }

@@ -2,6 +2,7 @@ package viaje;
 
 import chofer.Chofer;
 import pedido.Pedido;
+import usuario.Cliente;
 import vehiculo.Vehiculo;
 
 /**
@@ -16,4 +17,5 @@ public interface IViaje {
     String getStatus();
     Chofer getChofer();
     Vehiculo getVehiculo();
+    Cliente getCliente();
 }

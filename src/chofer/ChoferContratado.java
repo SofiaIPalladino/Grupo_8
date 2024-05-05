@@ -17,8 +17,7 @@ public class ChoferContratado extends Chofer {
      */
 	public ChoferContratado(String dni, String nombre, double gananciaXViaje) {
 		super(dni, nombre);
-		this.gananciaXViaje = gananciaXViaje;
-		this.recaudado = 0;
+ 		this.recaudado = 0;
 	}
 	/**
 	 * Método para obtener el sueldo de un chofer contratado.
@@ -27,11 +26,17 @@ public class ChoferContratado extends Chofer {
 	 * @return El sueldo neto del chofer contratado.
 	 */
 	public double getSueldo() {
-		return this.recaudado *gananciaXViaje;
+		return this.recaudado * gananciaXViaje;
 	}
 	
 	public void recaudaDeViaje(double monto) {
 		this.recaudado += monto;
+	}
+	public static double getGananciaXViaje() {
+		return gananciaXViaje;
+	}
+	public static void setGananciaXViaje(double gananciaXViaje) {
+		ChoferContratado.gananciaXViaje = gananciaXViaje;
 	}
 
 }
