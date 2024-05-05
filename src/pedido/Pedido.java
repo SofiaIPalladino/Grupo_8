@@ -25,8 +25,8 @@ public class Pedido {
 	 * @param cantPersonas: cantidad de personas a transportar.<br>
 	 * @param cliente: cliente que realiza el pedido.<br>
 	 */
-	public Pedido(Date fecha, String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente,double distancia) {
-		this.fecha = fecha;
+	public Pedido(String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente,double distancia) {
+		this.fecha = new Date();
 		this.zona = zona;
 		this.mascota = mascota;
 		this.equipaje = equipaje;
