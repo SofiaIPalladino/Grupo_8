@@ -35,6 +35,8 @@ public class GestionViajes {
 					e.setChoferConViaje(c);
 					e.setVehiculoConViaje(v);
 					IViaje viaje=viajeFactory.getViaje(p, c, v);
+					c.agregaViaje();
+					c.agregaKm(p.getDistancia());
 					e.agregoViaje(viaje);
 					e.aceptaPedido(p);
 					if (c instanceof ChoferContratado) {

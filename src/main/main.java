@@ -86,6 +86,12 @@ public class main {
 		}
 		
 		gestionPagoChoferes.calculoPagoChoferes(admi);
+		
+		gestionPuntajes.actualizarPuntajes(admi);
+		
+		gestionPuntajes.MuestraPuntajes(admi);
+		
+		
 	}
 	
 	

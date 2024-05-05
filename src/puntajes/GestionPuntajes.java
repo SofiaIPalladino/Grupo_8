@@ -6,7 +6,8 @@ import chofer.Chofer;
 import java.util.List;
 
 public class GestionPuntajes {
-    public static void actualizarPuntajes(Usuario usuario) {
+	
+    public void actualizarPuntajes(Usuario usuario) {
     	if (usuario.isAdmin()) {
     		Chofer chofermax=null;
     		double maxDistancia = 0;
@@ -26,4 +27,20 @@ public class GestionPuntajes {
     	}else 
     		System.out.println("Solo el administrador puede actualizar los puntajes");	  	
     }
+    
+    public void MuestraPuntajes(Usuario usuario) {
+    	if (usuario.isAdmin()) {
+    		Empresa empresa=Empresa.getInstance();
+    		List<Chofer> choferes=empresa.getChoferes();
+    		System.out.println("Listado de puntajes: ");
+    		for (int i=0;i<choferes.size();i++) {
+    			Chofer c=choferes.get(i);
+    			System.out.println(c.getNombre()+" con DNI "+c.getDni()+": "+c.getPuntaje());
+    		}
+    		System.out.println("--------------------------------------");
+    	}else
+    		System.out.println("Solo el administrador puede actualizar los puntajes");	 	
+    }
+    
 }
+
