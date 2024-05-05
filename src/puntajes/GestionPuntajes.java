@@ -1,13 +1,11 @@
 package puntajes;
 
 import sistema.Empresa;
-import usuario.Usuario;
 import chofer.Chofer;
 import java.util.List;
 
 public class GestionPuntajes {
-    public static void actualizarPuntajes(Usuario usuario) {
-    	if (usuario.isAdmin()) {
+    public static void actualizarPuntajes() {
     		Chofer chofermax=null;
     		double maxDistancia = 0;
     		Empresa empresa=Empresa.getInstance();
@@ -23,7 +21,5 @@ public class GestionPuntajes {
     		}
     		if (chofermax!=null)
     			chofermax.agregaPuntaje(15);
-    	}else 
-    		System.out.println("Solo el administrador puede actualizar los puntajes");	  	
     }
 }

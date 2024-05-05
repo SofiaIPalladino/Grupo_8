@@ -5,6 +5,7 @@ import java.util.List;
 
 import excepciones.NoChoferException;
 import excepciones.PedidoRechazadoException;
+import pedido.Pedido;
 import usuario.Empresa;
 import vehiculo.Vehiculo;
 import viaje.Viaje;

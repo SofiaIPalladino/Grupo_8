@@ -74,7 +74,4 @@ public class Pedido {
 		return "Pedido [fecha=" + fecha + ", zona=" + zona + ", mascota=" + mascota + ", equipaje=" + equipaje
 				+ ", cantPersonas=" + cantPersonas + "]";
 	}
-	
-	public Cliente getCliente() {return this.cliente;}
-	
 }

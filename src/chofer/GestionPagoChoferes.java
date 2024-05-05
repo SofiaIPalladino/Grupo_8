@@ -9,8 +9,7 @@ public class GestionPagoChoferes {
 	
 	Empresa e=Empresa.getInstance();
 	
-	public void calculoPagoChoferes(Usuario usuario) {
-		if (usuario.isAdmin()) {
+	public void calculoPagoChoferes() {
 			double sueldo=0;
 			double totalsueldos=0;
 			Chofer choferaux=null;
@@ -23,10 +22,6 @@ public class GestionPagoChoferes {
 				System.out.println("El chofer: "+choferaux.getNombre()+" tiene que cobrar $"+sueldo);
 			}
 			System.out.println("Total de dinero a pagar por los sueldos: "+totalsueldos);
-		}else {
-			System.out.println("Solo el administrador puede pagar los salarios");	
-		}
-		
 	}
 
 }
