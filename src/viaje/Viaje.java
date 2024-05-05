@@ -99,6 +99,14 @@ public abstract class Viaje implements IViaje {
 				+ ", distanciaReal=" + distanciaReal + ", costo=" + costo + ", vehiculo=" + vehiculo + "]";
 	}
 
-	
+	@Override
+	public int compareTo(IViaje viaje) {
+		int rta = 0;
+		if (getCosto() < viaje.getCosto())
+			rta = -1;
+		else if (getCosto() > viaje.getCosto())
+			rta = 1;
+		return rta;
+	}
 
 }

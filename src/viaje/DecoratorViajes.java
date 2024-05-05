@@ -53,5 +53,8 @@ public abstract class DecoratorViajes implements IViaje {
 		return encapsulado.toString();
 	}
 	
-	
+	@Override
+	public int compareTo(IViaje viaje) {
+		return this.encapsulado.compareTo(viaje);
+	}
 }

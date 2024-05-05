@@ -10,7 +10,7 @@ import vehiculo.Vehiculo;
 /**
  * Interfaz que modela una parte del comportamiento de los viajes.<br>
  */
-public interface IViaje {
+public interface IViaje extends Comparable<IViaje>{
 
 	double getCosto();
 	Pedido getPedido();

@@ -82,7 +82,7 @@ public class Empresa {
 	}
 
 	public List<IViaje> getViajesFinalizados() {
-		return viajesFinalizados;
+		return new ArrayList<IViaje>(viajesFinalizados);
 	}
 	
 	public List<IViaje> getViajes(Chofer chofer){
