@@ -1,5 +1,7 @@
 package viaje;
 
+import java.util.Date;
+
 import chofer.Chofer;
 import pedido.Pedido;
 import usuario.Cliente;
@@ -17,6 +19,7 @@ public abstract class Viaje implements IViaje {
 	protected double distanciaReal,costo;
 	protected static double costoBase=1000;
 	protected Vehiculo vehiculo;
+	protected Date fecha;
 
 	
 	public Viaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
@@ -24,6 +27,7 @@ public abstract class Viaje implements IViaje {
 		this.chofer=chofer;
 		this.vehiculo=vehiculo;
 		this.status="solicitado";
+		this.fecha = new Date();
 	}
 	
     /**
@@ -78,6 +82,10 @@ public abstract class Viaje implements IViaje {
 	
 	public Cliente getCliente() {
 		return this.cliente;
+	}
+	
+	public Date getFecha() {
+		return this.fecha;
 	}
 
 	/**

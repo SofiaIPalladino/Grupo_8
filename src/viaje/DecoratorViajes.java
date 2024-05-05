@@ -1,5 +1,7 @@
  package viaje;
 
+import java.util.Date;
+
 import chofer.Chofer;
 import pedido.Pedido;
 import usuario.Cliente;
@@ -40,6 +42,10 @@ public abstract class DecoratorViajes implements IViaje {
 	
 	public Cliente getCliente() {
 		return this.encapsulado.getCliente();
+	}
+	
+	public Date getFecha() {
+		return this.encapsulado.getFecha();
 	}
 
 	@Override

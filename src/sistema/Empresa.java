@@ -2,6 +2,8 @@ package sistema;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Date;
+
 import chofer.Chofer;
 import excepciones.NoChoferException;
 import excepciones.NoVehiculoException;
@@ -149,11 +151,13 @@ public class Empresa {
 		this.viajes.add(v);
 	}
 	
-	public void muestraViajes(Chofer chofer) {
+	public void muestraViajes(Chofer chofer, Date desde, Date hasta) {
 		List<IViaje> viajesChofer = getViajes(chofer);
 		System.out.println("Viajes de "+chofer.getNombre());
 		for(IViaje viaje: viajesChofer) {
-			System.out.println(viaje);
+			if (viaje.getFecha().after(desde) && viaje.getFecha().before(hasta)) {				
+				System.out.println(viaje);
+			}
 		}
 	}
 }

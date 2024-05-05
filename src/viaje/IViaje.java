@@ -1,5 +1,7 @@
 package viaje;
 
+import java.util.Date;
+
 import chofer.Chofer;
 import pedido.Pedido;
 import usuario.Cliente;
@@ -18,4 +20,5 @@ public interface IViaje {
     Chofer getChofer();
     Vehiculo getVehiculo();
     Cliente getCliente();
+    Date getFecha();
 }
