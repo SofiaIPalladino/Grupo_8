@@ -1,5 +1,7 @@
 package modelo;
 
+import usuario.Cliente;
+
 /**
  * Clase que modela las caracteristicas de un pedido.<br>
  */
@@ -42,6 +44,10 @@ public class Pedido {
 		return equipaje;
 	}
 	
+	public Cliente getCliente() {
+		return cliente;
+	}
+
 	public boolean usoBaul() {
 		if (this.equipaje==("Baul"))
 			return true;
