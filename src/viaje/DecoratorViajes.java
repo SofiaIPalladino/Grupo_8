@@ -41,4 +41,11 @@ public abstract class DecoratorViajes implements IViaje {
 	public Cliente getCliente() {
 		return this.encapsulado.getCliente();
 	}
+
+	@Override
+	public String toString() {
+		return encapsulado.toString();
+	}
+	
+	
 }

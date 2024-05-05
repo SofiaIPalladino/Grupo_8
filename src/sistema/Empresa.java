@@ -82,6 +82,16 @@ public class Empresa {
 	public List<IViaje> getViajesFinalizados() {
 		return viajesFinalizados;
 	}
+	
+	public List<IViaje> getViajes(Chofer chofer){
+		List<IViaje> viajesChofer = new ArrayList<IViaje>();
+		for (IViaje viaje: viajesFinalizados) {
+			if (viaje.getChofer() == chofer) {
+				viajesChofer.add(viaje);
+			}
+		}
+		return viajesChofer;
+	}
 
 	public List<Vehiculo> getVehiculosEnUso() {
 		return vehiculosEnUso;
@@ -137,6 +147,14 @@ public class Empresa {
 	}
 	public void agregoViaje(IViaje v) {
 		this.viajes.add(v);
+	}
+	
+	public void muestraViajes(Chofer chofer) {
+		List<IViaje> viajesChofer = getViajes(chofer);
+		System.out.println("Viajes de "+chofer.getNombre());
+		for(IViaje viaje: viajesChofer) {
+			System.out.println(viaje);
+		}
 	}
 }
 	
