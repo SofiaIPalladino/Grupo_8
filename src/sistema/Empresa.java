@@ -94,6 +94,16 @@ public class Empresa {
 		}
 		return viajesChofer;
 	}
+	
+	public List<IViaje> getViajes(Cliente cliente){
+		List<IViaje> viajesChofer = new ArrayList<IViaje>();
+		for (IViaje viaje: viajesFinalizados) {
+			if (viaje.getCliente() == cliente) {
+				viajesChofer.add(viaje);
+			}
+		}
+		return viajesChofer;
+	}
 
 	public List<Vehiculo> getVehiculosEnUso() {
 		return vehiculosEnUso;
@@ -154,6 +164,16 @@ public class Empresa {
 	public void muestraViajes(Chofer chofer, Date desde, Date hasta) {
 		List<IViaje> viajesChofer = getViajes(chofer);
 		System.out.println("Viajes de "+chofer.getNombre());
+		for(IViaje viaje: viajesChofer) {
+			if (viaje.getFecha().after(desde) && viaje.getFecha().before(hasta)) {				
+				System.out.println(viaje);
+			}
+		}
+	}
+	
+	public void muestraViajes(Cliente cliente, Date desde, Date hasta) {
+		List<IViaje> viajesChofer = getViajes(cliente);
+		System.out.println("Viajes de "+cliente.getNombre());
 		for(IViaje viaje: viajesChofer) {
 			if (viaje.getFecha().after(desde) && viaje.getFecha().before(hasta)) {				
 				System.out.println(viaje);
