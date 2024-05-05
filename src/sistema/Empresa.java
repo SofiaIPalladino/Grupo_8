@@ -168,7 +168,7 @@ public class Empresa {
 	 * @param desde
 	 * @param hasta
 	 * 
-	 * <br> precondiciones: desde tiene que ser una fecha menor a hasta
+	 * <br> precondiciones: desde tiene que ser una fecha menor o igual a hasta
 	 */
 	public void muestraViajes(Chofer chofer, Date desde, Date hasta) {
 		List<IViaje> viajesChofer = getViajes(chofer);
@@ -186,7 +186,7 @@ public class Empresa {
 	 * @param desde
 	 * @param hasta
 	 * 
-	 * <br> precondiciones: desde tiene que ser una fecha menor a hasta
+	 * <br> precondiciones: desde tiene que ser una fecha menor o igual a hasta
 	 */
 	public void muestraViajes(Cliente cliente, Date desde, Date hasta) {
 		List<IViaje> viajesChofer = getViajes(cliente);
