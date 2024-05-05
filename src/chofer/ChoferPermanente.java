@@ -85,11 +85,6 @@ public class ChoferPermanente extends Chofer {
 		return sueldoBasico;
 	}
 	
-	public int getAntiguedad() {
-		//Debes calcular la cantidad de años que trabajo, tiene que ser casteado a un entero
-		
-		return 0;
-	}
     
 	public int getAntiguedad() {
         LocalDate fechaActual = LocalDate.now();
