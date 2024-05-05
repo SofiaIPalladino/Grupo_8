@@ -2,6 +2,7 @@ package viaje;
 
 import chofer.Chofer;
 import modelo.Pedido;
+import usuario.Cliente;
 import vehiculo.Vehiculo;
 
 /**
