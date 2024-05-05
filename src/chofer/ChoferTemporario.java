@@ -6,10 +6,9 @@ package chofer;
  */
 public class ChoferTemporario extends Chofer {
 	
-	private static double sueldoBasico;
-	private double aportes;
-	private double plusXCantViajes;
-	private int cantViajes;
+	private static double sueldoBasico=15000;
+	private double plusXCantViajes=0.1;
+	private static int cantviajesbonus=40;
 	
 	/**
      * Constructor para crear un ChoferTemporario.
@@ -20,12 +19,8 @@ public class ChoferTemporario extends Chofer {
      * @param plusXCantViajes El porcentaje de aumento por cantidad de viajes realizados.
      * @param cantViajes La cantidad de viajes realizados por el chofer.
      */
-	public ChoferTemporario(String dni, String nombre, float sueldobasico, float aportes, float plusxcantviajes, int cantviajes) {
+	public ChoferTemporario(String dni, String nombre) {	
 		super(dni, nombre);
-		this.sueldoBasico = sueldobasico;
-		this.aportes = aportes;
-		this.plusXCantViajes = plusxcantviajes;
-		this.cantViajes = cantviajes;
 	}
 	/**
      * Método para obtener el sueldo de un chofer temporario.
@@ -36,19 +31,14 @@ public class ChoferTemporario extends Chofer {
 	@Override
 	public double getSueldo() {
 		double sueldo = sueldoBasico;
-		// Aquí se calcula el sueldo bruto (sueldo basico + pluses).
-        sueldo += sueldoBasico * (plusXCantViajes / 100) * cantViajes;
-     // Aquí se le restan los aportes al sueldo bruto.
+		if (this.cantidadDeViajes>=cantviajesbonus)
+			sueldo += sueldoBasico * plusXCantViajes;
         sueldo -= sueldo * (aportes / 100);
         return sueldo;
 	}
 
 	public double getAportes() {
 		return aportes;
-	}
-
-	public void setAportes(double aportes) {
-		this.aportes = aportes;
 	}
 
 	public double getPlusXCantViajes() {
@@ -60,11 +50,11 @@ public class ChoferTemporario extends Chofer {
 	}
 
 	public int getCantViajes() {
-		return cantViajes;
+		return cantidadDeViajes;
 	}
 
 	public void setCantViajes(int cantViajes) {
-		this.cantViajes = cantViajes;
+		this.cantidadDeViajes = cantViajes;
 	}
 
 	public double getSueldoBasico() {

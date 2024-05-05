@@ -1,6 +1,6 @@
 package vehiculo;
 
-import modelo.Pedido;
+import pedido.Pedido;
 
 /**
  * Esta clase representa un vehículo con atributos como:

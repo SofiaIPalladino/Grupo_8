@@ -17,12 +17,13 @@ public abstract class Viaje implements IViaje {
 	protected double distanciaReal,costo;
 	protected static double costoBase=1000;
 	protected Vehiculo vehiculo;
-	
+
 	
 	public Viaje(Pedido pedido, Chofer chofer, Vehiculo vehiculo) {
 		this.pedido=pedido;
 		this.chofer=chofer;
 		this.vehiculo=vehiculo;
+		this.status="solicitado";
 	}
 	
     /**
@@ -54,19 +55,38 @@ public abstract class Viaje implements IViaje {
 		return pedido;
 	}
 	
+	
+	
+	
+	
+	@Override
+	public Vehiculo getVehiculo() {
+		// TODO Auto-generated method stub
+		return this.vehiculo;
+	}
+
+	@Override
+	public Chofer getChofer() {
+		// TODO Auto-generated method stub
+		return this.chofer;
+	}
+
+	@Override
+	public void setStatus(String s) {
+		this.status=s;
+		
+	}
+
+	@Override
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return this.status;
+	}
+
 	/**
 	 * Este metodo abstracto calculara el costo del viaje dependiento del tipo de viaje.<br>
 	 */
 	public abstract double getCosto();
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-	
-	
 
 }

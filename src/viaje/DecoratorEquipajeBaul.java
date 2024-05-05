@@ -1,6 +1,6 @@
 package viaje;
 
-import modelo.Pedido;
+import pedido.Pedido;
 
 /**
  * Clase concreta que modela el comportamiento de los viajes con equipaje en baul.<br>

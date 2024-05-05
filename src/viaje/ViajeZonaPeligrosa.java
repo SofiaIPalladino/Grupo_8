@@ -1,7 +1,7 @@
 package viaje;
 
 import chofer.Chofer;
-import modelo.Pedido;
+import pedido.Pedido;
 import vehiculo.Vehiculo;
 
 /**
@@ -31,4 +31,7 @@ public class ViajeZonaPeligrosa extends Viaje{
 		double incrXKm=Viaje.getCostoBase()*this.getDistanciaReal()*0.20;
 		return Viaje.getCostoBase()+incrXPersona+incrXKm;
 	}
+
+
+	
 }
