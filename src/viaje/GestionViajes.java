@@ -99,17 +99,24 @@ public class GestionViajes {
 	
 		
 	
-	private static Vehiculo getVehiculo(List<Vehiculo> v,int cantPasajeros,boolean baul,boolean mascota ) {		
-	        int i = 0;
-	        Vehiculo p=null;
-	        while (i < v.size()) {
-	        	p= v.get(i);
-	            if (p.verificaPasajeros(cantPasajeros) && p.verificaBaul(baul)&& p.verificaMascota(mascota)) {
-	                return p; // Retorna la instancia de la persona encontrada
-	            }
-	            i++;
+	private Vehiculo getVehiculo(Pedido pedido) throws NoVehiculoException {		   
+		List<Vehiculo> listadoVehiculos = Empresa.getInstance().getVehiculos();
+		int i = 0;
+	    Vehiculo mejorVehiculo = null;
+	    int mayorPrioridad = 0;
+	    while (i < listadoVehiculos.size()) {
+	    	Vehiculo vehiculo = listadoVehiculos.get(i);
+	    	Integer prioridad = vehiculo.getPrioridad(pedido);
+	        if (prioridad != null && prioridad.intValue() > mayorPrioridad) { // si prioridad es igual a null, el vehiculo no es apto para el pedido
+	        	mayorPrioridad = prioridad.intValue();
+	        	mejorVehiculo = vehiculo;
 	        }
-	    return p; 
+	        i++;
+	    }
+	    if (mejorVehiculo != null) {
+	    	return mejorVehiculo;
+	    }
+	    throw new NoVehiculoException("No se encontro un vehiculo acorde al pedido");
 	}
 	
 	
