@@ -32,10 +32,10 @@ public class main {
 		
 		
 		
-		Pedido pedidomascota=new Pedido(new Date(),"asdcwef",true,"UsoBaul",3,cliente);
-		Pedido pedidobaul=new Pedido(new Date(),"asdcwef",false,"UsoBaul",4,cliente);
-		Pedido pedidocombi=new Pedido(new Date(),"asdcwef",false,"UsoBaul",6,cliente);
-		Pedido pedidoqueno=new Pedido(new Date(),"asdcwef",true,"UsoBaul",9,cliente);
+		Pedido pedidomascota=new Pedido("asdcwef",true,"UsoBaul",3,cliente);
+		Pedido pedidobaul=new Pedido("asdcwef",false,"UsoBaul",4,cliente);
+		Pedido pedidocombi=new Pedido("asdcwef",false,"UsoBaul",6,cliente);
+		Pedido pedidoqueno=new Pedido("asdcwef",true,"UsoBaul",9,cliente);
 		
 		Automovil auto1=new Automovil("456624",4,true,true);
 		Moto moto1=new Moto("32143",1,false,false);
