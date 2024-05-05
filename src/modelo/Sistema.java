@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,14 +15,12 @@ import chofer.Chofer;
 public class Sistema {
 	public Viaje crearViajeDesdePedido(Empresa empresa, Pedido pedido) throws PedidoRechazadoException, NoChoferException {
 		
-		ViajeFactory viajesFabrica = new ViajeFactory();
-		
         if (evaluarPedido(empresa, pedido)) {
         	Vehiculo vehiculo = mejorVehiculoDisponible(empresa, pedido);
         	if(!empresa.getChoferes().isEmpty()) {
         		Chofer chofer = empresa.getChoferes().get(0);
         		Collections.rotate(empresa.getChoferes(), -1); // Este método rota los elementos del array x posiciones, con -1 el primer elemento queda último.
-        		return (Viaje)viajesFabrica.getViaje(pedido, chofer, vehiculo);
+        		return (Viaje) ViajeFactory.getViaje(pedido, chofer, vehiculo);
         	}else {
         		throw new NoChoferException();
         	}	
@@ -34,7 +31,7 @@ public class Sistema {
 
     private boolean evaluarPedido(Empresa empresa, Pedido pedido) {
     	
-        ArrayList<Vehiculo> vehiculosDisponibles = empresa.getVehiculos();
+        List<Vehiculo> vehiculosDisponibles = empresa.getVehiculos();
         
         for(Vehiculo vh : vehiculosDisponibles) {
         	if(vh.verificaPasajeros(pedido.getCantPersonas()) && vh.verificaBaul(pedido.usoBaul()) && vh.verificaMascota(pedido.getMascota())) {
@@ -49,7 +46,7 @@ public class Sistema {
     	int max = 0;
     	Vehiculo mejorVehiculo = null;
     	
-    	ArrayList<Vehiculo> vehiculosDisponibles = empresa.getVehiculos();
+    	List<Vehiculo> vehiculosDisponibles = empresa.getVehiculos();
         for(Vehiculo vh : vehiculosDisponibles) {
         	if(max < vh.getPrioridad(pedido)) {
         		max = vh.getPrioridad(pedido);
