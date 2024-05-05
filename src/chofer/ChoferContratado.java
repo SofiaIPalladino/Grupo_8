@@ -29,6 +29,7 @@ public class ChoferContratado extends Chofer {
 	public double getSueldo() {
 		return this.recaudado *gananciaXViaje;
 	}
+	
 	public void recaudaDeViaje(double monto) {
 		this.recaudado += monto;
 	}

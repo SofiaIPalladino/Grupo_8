@@ -3,6 +3,8 @@ package viaje;
 import java.util.List;
 
 import chofer.Chofer;
+import chofer.ChoferContratado;
+import chofer.ChoferTemporario;
 import excepciones.NoChoferException;
 import excepciones.NoVehiculoException;
 import excepciones.ViajeNoEncontradoException;
@@ -31,7 +33,12 @@ public class GestionViajes {
 					c=buscarChofer(e.getChoferes());
 					e.setChoferConViaje(c);
 					e.setVehiculoConViaje(v);
-					e.agregoViaje(viajeFactory.getViaje(p, c, v));	
+					IViaje viaje=viajeFactory.getViaje(p, c, v);
+					e.agregoViaje(viaje);	
+					if (c instanceof ChoferContratado) {
+						ChoferContratado auxc=(ChoferContratado) c;
+						auxc.recaudaDeViaje(viaje.getCosto());
+					}
 					System.out.println("Viaje Creado Con exito");
 				} catch (NoChoferException | NoVehiculoException e1) {////separar 
 					// TODO Auto-generated catch block
