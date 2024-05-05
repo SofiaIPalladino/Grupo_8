@@ -32,4 +32,6 @@ public class ViajeZonaPeligrosa extends Viaje{
 		return Viaje.getCostoBase()+incrXPersona+incrXKm;
 	}
 
+
+	
 }

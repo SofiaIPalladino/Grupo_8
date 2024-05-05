@@ -8,9 +8,6 @@ public class Administrador extends Usuario{
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
-	
-	
+
 
 }

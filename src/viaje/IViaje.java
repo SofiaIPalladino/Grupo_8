@@ -16,5 +16,4 @@ public interface IViaje {
     String getStatus();
     Chofer getChofer();
     Vehiculo getVehiculo();
-  
 }

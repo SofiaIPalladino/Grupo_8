@@ -31,4 +31,6 @@ public class ViajeZonaEstandar extends Viaje{
 		double incrXKm=Viaje.getCostoBase()*this.getDistanciaReal()*0.10;
 		return Viaje.getCostoBase()+incrXPersona+incrXKm;
 	}
+
+
 }

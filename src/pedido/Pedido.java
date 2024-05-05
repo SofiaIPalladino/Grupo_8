@@ -14,6 +14,7 @@ public class Pedido {
 	private String equipaje;
 	private int cantPersonas;
 	private Cliente cliente;
+	private double distancia;
 	
 	/**
 	 * Construye un objeto de tipo Pedido.<br>
@@ -24,15 +25,20 @@ public class Pedido {
 	 * @param cantPersonas: cantidad de personas a transportar.<br>
 	 * @param cliente: cliente que realiza el pedido.<br>
 	 */
-	public Pedido(Date fecha, String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente) {
+	public Pedido(Date fecha, String zona, boolean mascota, String equipaje, int cantPersonas, Cliente cliente,double distancia) {
 		this.fecha = fecha;
 		this.zona = zona;
 		this.mascota = mascota;
 		this.equipaje = equipaje;
 		this.cantPersonas = cantPersonas;
 		this.cliente = cliente;
+		this.distancia=distancia;
 	}
 
+	public double getDistancia() {
+		return distancia;
+	}
+	
 	public Date  getFecha() {
 		return fecha;
 	}

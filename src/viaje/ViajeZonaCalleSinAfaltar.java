@@ -31,4 +31,8 @@ public class ViajeZonaCalleSinAfaltar extends Viaje {
 		double incrXKm=Viaje.getCostoBase()*this.getDistanciaReal()*0.15;
 		return Viaje.getCostoBase()+incrXPersona+incrXKm;
 	}
+
+	
+
+	
 }

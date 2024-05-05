@@ -10,6 +10,8 @@ public abstract class Chofer {
 	protected String nombre;
 	protected int cantidadDeViajes=0;
 	protected static double aportes=0.15;
+	protected int puntaje=0;
+	protected double km=0;
 	
 	/**
      * Constructor para crear un Chofer.
@@ -50,5 +52,27 @@ public abstract class Chofer {
 	public int cantViajes() {
 		return this.cantidadDeViajes;
 	}
+	public int getPuntaje() {
+		return puntaje;
+	}
+	
+	public void setPuntaje(int puntaje) {
+		this.puntaje = puntaje;
+	}
+	
+	public void agregaPuntaje(int puntaje) {
+		this.puntaje+=puntaje;
+	}
 
+	public void agregaKm(double km) {
+		this.km+=km;
+	}
+	
+	public double getKm() {
+		return km;
+	}
+
+	
+	
+	
 }
