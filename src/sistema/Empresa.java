@@ -161,6 +161,15 @@ public class Empresa {
 		this.viajes.add(v);
 	}
 	
+	
+	/**
+	 * 
+	 * @param chofer
+	 * @param desde
+	 * @param hasta
+	 * 
+	 * <br> precondiciones: desde tiene que ser una fecha menor a hasta
+	 */
 	public void muestraViajes(Chofer chofer, Date desde, Date hasta) {
 		List<IViaje> viajesChofer = getViajes(chofer);
 		System.out.println("Viajes de "+chofer.getNombre());
@@ -171,6 +180,14 @@ public class Empresa {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param chofer
+	 * @param desde
+	 * @param hasta
+	 * 
+	 * <br> precondiciones: desde tiene que ser una fecha menor a hasta
+	 */
 	public void muestraViajes(Cliente cliente, Date desde, Date hasta) {
 		List<IViaje> viajesChofer = getViajes(cliente);
 		System.out.println("Viajes de "+cliente.getNombre());
