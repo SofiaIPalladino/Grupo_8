@@ -32,4 +32,5 @@ public class DecoratorEquipajeBaul extends DecoratorViajes {
 		return this.encapsulado.getPedido();
 	}
 
+	
 }
