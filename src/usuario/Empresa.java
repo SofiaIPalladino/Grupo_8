@@ -2,7 +2,6 @@ package usuario;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 import chofer.Chofer;
 import vehiculo.Vehiculo;
@@ -10,7 +9,7 @@ import viaje.Viaje;
 
 public class Empresa {
 	private static Empresa instance=null;
-	private List<Cliente> clientes;
+	private List<Usuario> usuarios;
 	private List<Chofer> choferes;
 	private List<Vehiculo> vehiculos;
 	private List<Viaje> viajes;
@@ -27,8 +26,8 @@ public class Empresa {
 		return instance;
 	}
 
-	public List<Cliente> getClientes() {
-		return clientes;
+	public List<Usuario> getUsuarios() {
+		return usuarios;
 	}
 
 	public List<Chofer> getChoferes() {

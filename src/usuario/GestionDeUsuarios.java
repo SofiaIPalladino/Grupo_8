@@ -1,21 +1,34 @@
 package usuario;
 
 import java.util.Iterator;
-import java.util.List;
 
 import excepciones.UsuarioExistenteException;
+import excepciones.UsuarioInvalidoException;
 
 public class GestionDeUsuarios{
 	
-	public Usuario creaUsuario(List<Usuario> usuarios,Usuario usuario) throws UsuarioExistenteException {
-		  Iterator<Usuario> iterator = usuarios.iterator();
-	        while (iterator.hasNext()) {
-	            Usuario usuarios1 = iterator.next();
-	            if (usuarios1.getUsuario().equals(usuario.getUsuario())) {
-	            	throw new UsuarioExistenteException("Usuario ya existente: "+usuario.getUsuario());
-	            }
-	        }
-	       UsuarioFactory factoryUsuario = new UsuarioFactory();
-	       return factoryUsuario.crea(usuario);
+	public static Usuario creaUsuario(String usuario, String contrasenia, String nombre, String apellido,boolean admin) throws UsuarioExistenteException, UsuarioInvalidoException {
+		//Estas verificaciones en la segunda parte se van a realizar en la ventana que reciba el input
+		if(usuario == null || usuario == "") {
+			throw new UsuarioInvalidoException("Nombre de usuario invalido");
+		}
+		if(contrasenia == null || contrasenia == "") {
+			throw new UsuarioInvalidoException("Contrasenia invalida");
+		}
+		if(nombre == null || nombre == "") {
+			throw new UsuarioInvalidoException("Nombre invalido");
+		}
+		if(apellido == null || apellido == "") {
+			throw new UsuarioInvalidoException("Apellido invalido");
+		}
+		
+		Iterator<Usuario> iterator = Empresa.getInstance().getUsuarios().iterator();
+		while (iterator.hasNext()) {
+			Usuario usuarios1 = iterator.next();
+			if (usuarios1.getUsuario().equals(usuario)) {
+				throw new UsuarioExistenteException("Usuario ya existente: "+usuario);   
+			}   
+		}
+		return UsuarioFactory.crea(usuario, contrasenia, nombre, apellido, admin);
 	}
 }
