@@ -1,6 +1,7 @@
 package usuario;
 
 import excepciones.UsuarioExistenteException;
+
 import excepciones.UsuarioInexistenteException;
 import sistema.Empresa;
 import viaje.IViaje;

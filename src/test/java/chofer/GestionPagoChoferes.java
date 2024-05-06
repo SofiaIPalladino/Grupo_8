@@ -2,8 +2,13 @@ package chofer;
 
 import sistema.Empresa;
 import usuario.Usuario;
-
 import java.util.List;
+
+/**
+ * Esta clase se encarga del pago de choferes mensuales, informando por pantalla el total de dinero a pagar y el listado de cuanto
+ * cobra cada chofer
+ * 
+ */
 
 public class GestionPagoChoferes {
 	

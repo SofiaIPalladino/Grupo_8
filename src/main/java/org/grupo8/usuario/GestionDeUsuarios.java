@@ -1,7 +1,5 @@
 package org.grupo8.usuario;
 
-
-
 import org.grupo8.excepciones.UsuarioExistenteException;
 import org.grupo8.excepciones.UsuarioInexistenteException;
 import org.grupo8.sistema.Empresa;
@@ -10,6 +8,16 @@ import org.grupo8.viaje.IViaje;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+
+/**
+ * Esta clase se encarga de gestionar a los usuarios, permitiendo crearlos, modificarlos,
+ * consultar la existencia de los mismos y mostrar el listado de viajes realizados por un cliente ingresado
+ * 
+ * 
+ */
+
+
 
 public class GestionDeUsuarios{
 	
