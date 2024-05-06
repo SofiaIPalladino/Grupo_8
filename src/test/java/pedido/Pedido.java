@@ -1,8 +1,8 @@
 package pedido;
 
-import java.time.LocalDate;
-
 import usuario.Cliente;
+
+import java.time.LocalDate;
 
 /**
  * Clase que modela las caracteristicas de un pedido.<br>

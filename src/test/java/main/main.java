@@ -1,13 +1,6 @@
 package main;
 
-import java.time.LocalDate;
-import java.util.Date;
-
-import chofer.Chofer;
-import chofer.ChoferContratado;
-import chofer.ChoferPermanente;
-import chofer.ChoferTemporario;
-import chofer.GestionPagoChoferes;
+import chofer.*;
 import excepciones.NoVehiculoException;
 import excepciones.UsuarioExistenteException;
 import excepciones.ViajeNoEncontradoException;
@@ -18,11 +11,12 @@ import sistema.Empresa;
 import usuario.Cliente;
 import usuario.GestionDeUsuarios;
 import usuario.Usuario;
-import usuario.UsuarioFactory;
 import vehiculo.Automovil;
 import vehiculo.Combi;
 import vehiculo.Moto;
 import viaje.GestionViajes;
+
+import java.time.LocalDate;
 
 public class main {
 

@@ -1,19 +1,20 @@
-package sistema;
+package org.grupo8.sistema;
 
-import java.util.List;
+
+
+import org.grupo8.chofer.Chofer;
+import org.grupo8.excepciones.NoChoferException;
+import org.grupo8.excepciones.NoVehiculoException;
+import org.grupo8.pedido.Pedido;
+import org.grupo8.usuario.Cliente;
+import org.grupo8.usuario.Usuario;
+import org.grupo8.vehiculo.Vehiculo;
+import org.grupo8.viaje.IViaje;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 
-import chofer.Chofer;
-import excepciones.NoChoferException;
-import excepciones.NoVehiculoException;
-import pedido.Pedido;
-import usuario.Cliente;
-import usuario.Usuario;
-import vehiculo.Vehiculo;
-import viaje.IViaje;
-import viaje.Viaje;
 
 public class Empresa {
 	private static Empresa instance=null;
@@ -137,7 +138,7 @@ public class Empresa {
 	}
 	
 	
-	public void setVehiculoConViaje(Vehiculo v) throws NoVehiculoException  {
+	public void setVehiculoConViaje(Vehiculo v) throws NoVehiculoException {
 		this.vehiculosEnUso.add(v);
 	}
 	public void setVehiculoDisponible(Vehiculo v) throws NoVehiculoException  {

@@ -1,4 +1,4 @@
-package chofer;
+package org.grupo8.chofer;
 
 /**
  * Clase que representa a un chofer temporario de la empresa.

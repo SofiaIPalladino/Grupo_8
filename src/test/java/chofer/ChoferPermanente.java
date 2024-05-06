@@ -1,7 +1,7 @@
 package chofer;
 
-import java.time.temporal.ChronoUnit;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 /**
  * Clase que representa a un chofer permanente de la empresa.

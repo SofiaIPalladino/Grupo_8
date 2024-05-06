@@ -1,4 +1,4 @@
-package chofer;
+package org.grupo8.chofer;
 
 /**
  * Clase abstracta que representa a un chofer de la empresa.

@@ -1,11 +1,13 @@
- package viaje;
+package org.grupo8.viaje;
+
+
+
+import org.grupo8.chofer.Chofer;
+import org.grupo8.pedido.Pedido;
+import org.grupo8.usuario.Cliente;
+import org.grupo8.vehiculo.Vehiculo;
 
 import java.time.LocalDate;
-
-import chofer.Chofer;
-import pedido.Pedido;
-import usuario.Cliente;
-import vehiculo.Vehiculo;
 
  /**
   * Clase abstracta que modela modela las caracteristicas y comportamiento comun de los encapsulados.<br>

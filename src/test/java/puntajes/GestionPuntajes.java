@@ -1,8 +1,9 @@
 package puntajes;
 
+import chofer.Chofer;
 import sistema.Empresa;
 import usuario.Usuario;
-import chofer.Chofer;
+
 import java.util.List;
 
 public class GestionPuntajes {

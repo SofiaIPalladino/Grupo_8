@@ -1,8 +1,10 @@
-package puntajes;
+package org.grupo8.puntajes;
 
-import sistema.Empresa;
-import usuario.Usuario;
-import chofer.Chofer;
+
+import org.grupo8.chofer.Chofer;
+import org.grupo8.sistema.Empresa;
+import org.grupo8.usuario.Usuario;
+
 import java.util.List;
 
 public class GestionPuntajes {

@@ -1,28 +1,23 @@
-package main;
+package org.grupo8.main;
+
+
+import org.grupo8.chofer.*;
+import org.grupo8.excepciones.NoVehiculoException;
+import org.grupo8.excepciones.UsuarioExistenteException;
+import org.grupo8.excepciones.ViajeNoEncontradoException;
+import org.grupo8.pedido.GestionPedidos;
+import org.grupo8.pedido.Pedido;
+import org.grupo8.puntajes.GestionPuntajes;
+import org.grupo8.sistema.Empresa;
+import org.grupo8.usuario.Cliente;
+import org.grupo8.usuario.GestionDeUsuarios;
+import org.grupo8.usuario.Usuario;
+import org.grupo8.vehiculo.Automovil;
+import org.grupo8.vehiculo.Combi;
+import org.grupo8.vehiculo.Moto;
+import org.grupo8.viaje.GestionViajes;
 
 import java.time.LocalDate;
-import java.util.Date;
-
-import chofer.Chofer;
-import chofer.ChoferContratado;
-import chofer.ChoferPermanente;
-import chofer.ChoferTemporario;
-import chofer.GestionPagoChoferes;
-import excepciones.NoVehiculoException;
-import excepciones.UsuarioExistenteException;
-import excepciones.ViajeNoEncontradoException;
-import pedido.GestionPedidos;
-import pedido.Pedido;
-import puntajes.GestionPuntajes;
-import sistema.Empresa;
-import usuario.Cliente;
-import usuario.GestionDeUsuarios;
-import usuario.Usuario;
-import usuario.UsuarioFactory;
-import vehiculo.Automovil;
-import vehiculo.Combi;
-import vehiculo.Moto;
-import viaje.GestionViajes;
 
 public class main {
 

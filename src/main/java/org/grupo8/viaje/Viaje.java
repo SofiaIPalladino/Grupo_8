@@ -1,12 +1,12 @@
-package viaje;
+package org.grupo8.viaje;
+
+
+import org.grupo8.chofer.Chofer;
+import org.grupo8.pedido.Pedido;
+import org.grupo8.usuario.Cliente;
+import org.grupo8.vehiculo.Vehiculo;
 
 import java.time.LocalDate;
-import java.util.Date;
-
-import chofer.Chofer;
-import pedido.Pedido;
-import usuario.Cliente;
-import vehiculo.Vehiculo;
 
 /**
  * Clase abstracta que modela las caracteristicas y el comportamoiento de los viajes.<br>
@@ -62,7 +62,7 @@ public abstract class Viaje implements IViaje {
 	public Pedido getPedido() {
 		return pedido;
 	}
-	
+
 	
 	
 	

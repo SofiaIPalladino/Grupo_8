@@ -1,12 +1,11 @@
 package viaje;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 import chofer.Chofer;
 import pedido.Pedido;
 import usuario.Cliente;
 import vehiculo.Vehiculo;
+
+import java.time.LocalDate;
 
 /**
  * Clase abstracta que modela las caracteristicas y el comportamoiento de los viajes.<br>

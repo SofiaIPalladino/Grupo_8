@@ -1,17 +1,17 @@
-package viaje;
+package org.grupo8.viaje;
+
+
+import org.grupo8.chofer.Chofer;
+import org.grupo8.chofer.ChoferContratado;
+import org.grupo8.excepciones.NoChoferException;
+import org.grupo8.excepciones.NoVehiculoException;
+import org.grupo8.excepciones.ViajeNoEncontradoException;
+import org.grupo8.pedido.Pedido;
+import org.grupo8.sistema.Empresa;
+import org.grupo8.usuario.Cliente;
+import org.grupo8.vehiculo.Vehiculo;
 
 import java.util.List;
-
-import chofer.Chofer;
-import chofer.ChoferContratado;
-import chofer.ChoferTemporario;
-import excepciones.NoChoferException;
-import excepciones.NoVehiculoException;
-import excepciones.ViajeNoEncontradoException;
-import pedido.Pedido;
-import sistema.Empresa;
-import usuario.Cliente;
-import vehiculo.Vehiculo;
 
 public class GestionViajes {
 
@@ -45,7 +45,7 @@ public class GestionViajes {
 					}
 					
 					System.out.println("Viaje Creado Con exito");
-				} catch (NoChoferException e1) {////separar 
+				} catch (NoChoferException e1) {////separar
 					e1.printStackTrace();
 				}			
 			}

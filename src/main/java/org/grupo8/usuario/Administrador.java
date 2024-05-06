@@ -1,4 +1,4 @@
-package usuario;
+package org.grupo8.usuario;
 
 
 public class Administrador extends Usuario{

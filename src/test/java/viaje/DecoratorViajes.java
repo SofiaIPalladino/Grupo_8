@@ -1,11 +1,11 @@
  package viaje;
 
-import java.time.LocalDate;
+ import chofer.Chofer;
+ import pedido.Pedido;
+ import usuario.Cliente;
+ import vehiculo.Vehiculo;
 
-import chofer.Chofer;
-import pedido.Pedido;
-import usuario.Cliente;
-import vehiculo.Vehiculo;
+ import java.time.LocalDate;
 
  /**
   * Clase abstracta que modela modela las caracteristicas y comportamiento comun de los encapsulados.<br>

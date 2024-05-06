@@ -1,8 +1,9 @@
-package viaje;
+package org.grupo8.viaje;
 
-import chofer.Chofer;
-import pedido.Pedido;
-import vehiculo.Vehiculo;
+
+import org.grupo8.chofer.Chofer;
+import org.grupo8.pedido.Pedido;
+import org.grupo8.vehiculo.Vehiculo;
 
 /**
  * Clase concreta que modela las caracteristicas y el comportamiento de los viajes de tipo ViajeZonaEstandar.<br>

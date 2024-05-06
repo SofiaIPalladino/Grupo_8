@@ -1,5 +1,4 @@
-package usuario;
-
+package org.grupo8.usuario;
 public class Usuario{
 	private String usuario;
 	private String contrasenia;

@@ -1,6 +1,7 @@
-package vehiculo;
+package org.grupo8.vehiculo;
 
-import pedido.Pedido;
+
+import org.grupo8.pedido.Pedido;
 
 /**
  * Esta clase representa un vehículo con atributos como:

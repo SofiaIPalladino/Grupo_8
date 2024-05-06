@@ -1,6 +1,4 @@
-package usuario;
-
-import java.util.List;
+package org.grupo8.usuario;
 
 public class Cliente extends Usuario{
     

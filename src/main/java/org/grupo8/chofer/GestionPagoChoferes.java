@@ -1,9 +1,11 @@
-package chofer;
+package org.grupo8.chofer;
+
+
+
+import org.grupo8.sistema.Empresa;
+import org.grupo8.usuario.Usuario;
 
 import java.util.List;
-
-import sistema.Empresa;
-import usuario.Usuario;
 
 public class GestionPagoChoferes {
 	

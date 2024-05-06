@@ -1,6 +1,7 @@
-package viaje;
+package org.grupo8.viaje;
 
-import pedido.Pedido;
+
+import org.grupo8.pedido.Pedido;
 
 /**
  * Clase concreta que modela el comportamiento de los viajes con mascota.<br>

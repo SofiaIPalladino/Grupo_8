@@ -1,4 +1,4 @@
-package vehiculo;
+package org.grupo8.vehiculo;
 
 public class Moto extends Vehiculo {
 

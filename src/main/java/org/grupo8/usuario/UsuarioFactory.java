@@ -1,5 +1,4 @@
-package usuario;
-
+package org.grupo8.usuario;
 public class UsuarioFactory {
 	public Usuario crea(Usuario usuario) {
 		if (usuario.isAdmin())

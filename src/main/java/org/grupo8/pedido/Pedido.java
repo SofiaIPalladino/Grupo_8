@@ -1,8 +1,10 @@
-package pedido;
+package org.grupo8.pedido;
+
+
+
+import org.grupo8.usuario.Cliente;
 
 import java.time.LocalDate;
-
-import usuario.Cliente;
 
 /**
  * Clase que modela las caracteristicas de un pedido.<br>

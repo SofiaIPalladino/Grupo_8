@@ -1,4 +1,4 @@
-package excepciones;
+package org.grupo8.excepciones;
 
 public class NoChoferException extends Exception {
     public NoChoferException() {

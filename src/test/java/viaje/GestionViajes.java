@@ -1,10 +1,7 @@
 package viaje;
 
-import java.util.List;
-
 import chofer.Chofer;
 import chofer.ChoferContratado;
-import chofer.ChoferTemporario;
 import excepciones.NoChoferException;
 import excepciones.NoVehiculoException;
 import excepciones.ViajeNoEncontradoException;
@@ -12,6 +9,8 @@ import pedido.Pedido;
 import sistema.Empresa;
 import usuario.Cliente;
 import vehiculo.Vehiculo;
+
+import java.util.List;
 
 public class GestionViajes {
 

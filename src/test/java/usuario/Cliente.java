@@ -1,7 +1,5 @@
 package usuario;
 
-import java.util.List;
-
 public class Cliente extends Usuario{
     
     public Cliente(Usuario usuario) {
